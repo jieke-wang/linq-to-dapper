@@ -184,7 +184,7 @@ namespace Dapper.Contrib.Linq2Dapper
                 case MethodCall.FirstOrDefault:
                     // TOP(1)
                     _writer.TopCount = 1;
-                    return Visit(node.Arguments[1]);
+                    return Visit(node.Arguments[0]);
                 case MethodCall.Distinct:
                     // DISTINCT
                     _writer.IsDistinct = true;
